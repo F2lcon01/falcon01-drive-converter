@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direct Drive | Ultra Downloader</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lexend:wght@300;400;600&family=Readex+Pro:wght@300;400;600;700&family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-mesh"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="team-header">
+        <span class="team-name">Falcon01 Team</span>
+    </div>
+
+    <div class="app-container glass-panel">
+      <header class="app-header">
+        <h1 id="app-title" class="neon-text glow-pulse">Convert Drive Link to Direct Download</h1>
+        <button id="lang-toggle" class="lang-btn" aria-label="Switch Language">
+          <span class="lang-text">AR</span>
+          <div class="lang-icon">🌐</div>
+        </button>
+      </header>
+
+      <main class="converter-box">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="drive-link"
+              placeholder="Paste Drive link here..."
+              autocomplete="off"
+            />
+            <div class="input-border"></div>
+          </div>
+          
+          <div id="permission-warning" class="warning-box hidden">
+            <span class="warning-icon">⚠️</span>
+            <span id="warning-text">Did you permit "Anyone with the link"?</span>
+          </div>
+        </div>
+
+        <button id="convert-btn" class="cyber-btn">
+          <span id="btn-text">Generate Link</span>
+          <div class="btn-glitch"></div>
+        </button>
+
+        <div id="result-area" class="result-area hidden">
+          <div class="success-message hidden" id="success-msg">Link Ready!</div>
+          <div class="output-wrapper">
+            <input type="text" id="output-link" readonly />
+            <button id="copy-btn" class="icon-btn" aria-label="Copy">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path
+                  d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden"></div>
+      </main>
+    </div>
+
+    <footer class="app-footer">
+        <p dir="ltr">© 2026 Falcon01 Team. All Rights Reserved.</p>
+        <div class="verified-badge">
+            <span>🛡️ Official Certified Site</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
